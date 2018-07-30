@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GllacyShop</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="wrapper">
@@ -12,26 +14,32 @@
             <div class="container">
                 <div class="header__logo">
                     <a class="header__logo-link">
-                        <img class="header__logo-img" src="img/svg/Logo.svg" alt="logo-GllacyShop">
+                        <img class="header__logo-img" src="img/svg/Logo.svg" alt="Логотип GllacyShop">
                     </a>
                 </div>
                 <nav class="header__navigation">
                     <ul class="navigation-site">
                         <li class="navigation-site__item">
-                            <a href="#" class="navigation-site__link active">Каталог</a>
+                            <a class="navigation-site__link active" href="#">Каталог</a>
                         </li>
                         <li class="navigation-site__item">
-                            <a href="#" class="navigation-site__link">Доставка и оплата</a>
+                            <a class="navigation-site__link" href="#">Доставка и оплата</a>
                         </li>
                         <li class="navigation-site__item">
-                            <a href="#" class="navigation-site__link">О Компании</a>
+                            <a class="navigation-site__link" href="#">О Компании</a>
                         </li>
                     </ul>
-                    <ul class="navigation-user">
-                        <li class="navigation-user__item">Поиск</li>
-                        <li class="navigation-user__item">Вход</li>
-                        <li class="navigation-user__item">2 товара</li>
-                    </ul>
+                    <div class="header__buttons">
+                        <div class="header__buttons-search">
+                            <a class="buttons-search__link" href="#">Поиск</a>
+                        </div>
+                        <div class="header__buttons-login">
+                            <a class="buttons-login__link" href="#">Вход</a>
+                        </div>
+                        <div class="header__buttons-basket">
+                            <a class="buttons-basket__link" href="#">2 товара</a>
+                        </div>
+                    </div>
                 </nav>
                 <div class="contacts">
                     <p class="contacts__time">С 10 до 23, ежедневно</p>
@@ -59,7 +67,45 @@
                     <h3 class="visually-hidden">Отфильтровать список</h3>
                     <form class="form" action="">
                         <div class="form__filter">
-                            <!-- форма -->
+                            <fieldset class="filter__category">
+                                <legend class="category-name">Сортировка</legend>
+                                <select class="category__sort" name="sorting">
+                                    <option value="popular">по популярности</option>
+                                    <option value="chear">сначала недорогие</option>
+                                    <option value="expensive">сначала дорогие</option>
+                                    <option value="fatness">по дирности</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class="filter__category">
+                                <legend class="category-name">Цена: 100руб. - 500 руб.</legend>
+                                <input type="range" min="100" max="500" step="10">
+                            </fieldset>
+                            <fieldset class="filter__category">
+                                <legend class="category-name">Жирность</legend>
+                                <div class="category__fatness">
+                                    <label><span>0%</span>
+                                        <input type="radio" name="fatness">
+                                    </label>
+                                    <label>
+                                        <span>0%</span>
+                                        <input type="radio" name="fatness">
+                                    </label>
+                                    <label>
+                                        <span>0%</span>
+                                        <input type="radio" name="fatness">
+                                    </label>
+                                    <label>
+                                        <span>0%</span>
+                                        <input type="radio" name="fatness">
+                                    </label>
+                                </div>
+                                
+                            </fieldset>
+                            <fieldset class="filter__category">
+                                <legend class="category-name">Жирность</legend>
+                                <div class="category__fatness"></div>
+                                <input type="radio">
+                            </fieldset>
                         </div>
                     </form>
                 </div>
@@ -67,8 +113,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/1.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -77,8 +122,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/2.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -87,8 +131,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/3.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -97,8 +140,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/4.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -107,8 +149,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/5.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -117,8 +158,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/6.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -127,8 +167,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/7.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -137,8 +176,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/8.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -147,8 +185,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/9.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -157,8 +194,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/10.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -167,8 +203,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/11.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -177,8 +212,7 @@
                     <li class="catalog-ice__item">
                         <div class="catalog-ice__item-image">
                             <img class="ice__image" src="img/index/12.jpg" alt="">
-                            <p class="ice__price">310 &#8381/
-                                <span>кг</span>
+                            <p class="ice__price">310&#8381;/<span>кг</span>
                             </p>
                         </div>
                         <p class="ice__desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -196,41 +230,48 @@
         </main>
         <footer class="footer">
             <div class="container">
-                <ul class="socials">
-                    <li class="socials__item">
-                        <a class="sosials__link" href="#">Tw</a>
-                    </li>
-                    <li class="socials__item">
-                        <a class="sosials__link" href="#">Inst</a>
-                    </li>
-                    <li class="socials__item">
-                        <a class="sosials__link" href="#">Fb</a>
-                    </li>
-                    <li class="socials__item">
-                        <a class="sosials__link" href="#">Vk</a>
-                    </li>
-                </ul>
-                <div class="footer__nav">
-                    <div class="footer__nav-col">
-                        <ul class="footer__nav-items">
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="#">Для поставщиков</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="#">Для поставщиков</a>
-                            </li>
-                        </ul>
+                <div class="footer__col">
+                    <ul class="socials">
+                        <li class="socials__item">
+                            <a class="sosials__link" href="#">Твиттер</a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="sosials__link" href="#">Инстаграмм</a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="sosials__link" href="#">Facebook</a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="sosials__link" href="#">ВКонтакте</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__nav">
+                        <div class="footer__nav-col">
+                            <ul class="footer__nav-items">
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Для поставщиков</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">О производстве</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-col">
+                            <ul class="footer__nav-items">
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Наши документы</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Экологические стандарты</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="footer__nav-col">
-                        <ul class="footer__nav-items">
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="#">Для поставщиков</a>
-                            </li>
-                            <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="#">Для поставщиков</a>
-                            </li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="footer__col">
+                    <img class="footer__logo-HtmlAcademy" width="108" src="img/svg/logo-htmlacademy-small.svg" alt="логотип Html academy">
                 </div>
             </div>
         </footer>
