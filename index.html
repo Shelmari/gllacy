@@ -12,6 +12,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
+              <div class="nav__wrap">
                 <div class="header__logo">
                     <a class="header__logo-link">
                         <img class="header__logo-img" src="img/svg/Logo.svg" alt="Логотип GllacyShop">
@@ -30,28 +31,29 @@
                         </li>
                     </ul>
                     <div class="header__buttons">
-                        <div class="header__buttons-search">
+                        <div class="header__button">
                             <a class="buttons__link" href="#">Поиск</a>
                         </div>
-                        <div class="header__buttons-login">
+                        <div class="header__button">
                             <a class="buttons__link" href="#">Вход</a>
                         </div>
-                        <div class="header__buttons-basket">
+                        <div class="header__button">
                             <a class="buttons__link" href="#">Пусто</a>
                         </div>
                     </div>
                 </nav>
-                <div class="contacts">
-                    <p class="contacts__time">С 10 до 23, ежедневно</p>
-                    <a class="contacts__phone" href="tel:+78124502525">8 812 450-25-25</a>
-                </div>
+              </div>
+              <div class="contacts">
+                  <p class="contacts__time">С 10 до 23, ежедневно</p>
+                  <a class="contacts__phone" href="tel:+78124502525">8 812 450-25-25</a>
+              </div>
             </div>
         </header>
         <main class="container">
             <div class="slider-ice">
                 <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
                 <img class="slider__img" width="1045" src="img/index/ice1.png" alt="Крем-брюле и пломбир с малиновым джемом">
-                <a class="btn" href="#">Давайте оба!</a>
+                <a class="btn btn_slider" href="#">Давайте оба!</a>
                 <ul class="slider__nav">
                     <li class="slider__nav-item active">
                       <label for="one"></label>
@@ -68,12 +70,12 @@
                 </ul>
             </div>
             <ul class="banner">
-                <li class="banner__item">
+                <li class="banner__item banner__item_one">
                     <p class="banner__title">Малинка даром!</p>
                     <p class="banner__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                     <a class="btn btn_banner" href="#">Хочу варенье!</a>
                 </li>
-                <li class="banner__item">
+                <li class="banner__item banner__item_two">
                     <p class="banner__title">Шоколад даром!</p>
                     <p class="banner__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                     <a class="btn btn_banner" href="#">Хочу шоколадки!</a>
@@ -145,95 +147,91 @@
                         <p class="seo__desc">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает
                             мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
                     </li>
-                </ul>
+                </ul>   
             </section>
-            <section class="news">
-                <p class="news__subtitle">Новое в нашем блоге</p>
-                <h3 class="news__title">
-                  <a class="news__title-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-                </h3>
-            </section>
-            <section class="dispatch">
-              <h3 class="visually-hidden">Подписка на новости</h3>
-                <p class="dispatch__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-                    Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <form action="#" method="POST">
-                    <div class="dispatch__form">
-                        <label>
-                            <span class="visually-hidden">Электронная почта</span><br>
-                            <input class="dispatch__email" type="email" placeholder="Электронная почта">
-                        </label>
-                        <button class="btn btn_dispatch" type="submit">Отправить</button>
-                    </div>
-                </form>
-            </section>
-            <section class="map">
-                <h3 class="visually-hidden">Наше расположение</h3>
-                <img class="map-img" src="img/index/map.jpg" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
-                <div class="map__contacts">
-                    <div class="contacts__address">
-                        <p class="address__subtitle">Адрес главного офиса
-                            <br>и офлайн-магазина:</p>
-                        <p class="address__info">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-                    </div>
-                    <div class="contacts__tel">
-                        <p class="tel__subtitle">Для заказов по телефону:</p>
-                        <a class="tel__info" href="tel:+78124502525">8 812 450-25-25</a>
-                        <p class="tel__time">(с 10 до 23 ежедневно)</p>
-                    </div>
-                    <a class="btn btn_map">Форма обратной связи</a>
-                </div>
-            </section>
+            <div class="news__wrap">
+              <section class="news">
+                  <p class="news__subtitle">Новое в нашем блоге</p>
+                  <h3 class="news__title">
+                    <a class="news__title-link" href="#">10 способов сервировки<br>фруктовых щербетов к<br> столу</a>
+                  </h3>
+              </section>
+              <section class="dispatch">
+                <h3 class="visually-hidden">Подписка на новости</h3>
+                  <p class="dispatch__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+                      Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                  <form action="#" method="POST">
+                      <div class="dispatch__form">
+                          <label>
+                              <span class="visually-hidden">Электронная почта</span><br>
+                              <input class="dispatch__email" type="email" placeholder="Электронная почта">
+                          </label>
+                          <button class="btn btn_dispatch" type="submit">Отправить</button>
+                      </div>
+                  </form>
+              </section>
+            </div>
         </main>
+        <section class="map">
+            <h3 class="visually-hidden">Наше расположение</h3>
+            <img class="map-img" src="img/index/map.jpg" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            <div class="map__contacts">
+                <div class="contacts__address">
+                    <p class="address__subtitle">Адрес главного офиса
+                        <br>и офлайн-магазина:</p>
+                    <p class="address__info">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+                </div>
+                <div class="contacts__tel">
+                    <p class="tel__subtitle">Для заказов по телефону:</p>
+                    <a class="tel__info" href="tel:+78124502525">8 812 450-25-25</a>
+                    <p class="tel__time">(с 10 до 23 ежедневно)</p>
+                </div>
+                <a class="btn btn_map">Форма обратной связи</a>
+            </div>
+        </section>
+    </div> 
         <footer class="footer">
             <div class="container">
-                <div class="footer__col">
-                    <ul class="socials">
-                        <li class="socials__item">
-                            <a class="socials__link" href="#">Твиттер</a>
-                        </li>
-                        <li class="socials__item">
-                            <a class="socials__link" href="#">Инстаграмм</a>
-                        </li>
-                        <li class="socials__item">
-                            <a class="socials__link" href="#">Facebook</a>
-                        </li>
-                        <li class="socials__item">
-                            <a class="socials__link" href="#">ВКонтакте</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <div class="footer__nav">
-                        <div class="footer__nav-col">
-                            <ul class="footer__nav-items">
-                                <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Для поставщиков</a>
-                                </li>
-                                <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">О производстве</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer__nav-col">
-                            <ul class="footer__nav-items">
-                                <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Наши документы</a>
-                                </li>
-                                <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Экологические стандарты</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__col">
-                    <a class="footer__logo-link" href="#">
-                      <img class="footer__logo-HtmlAcademy" width="108" src="img/svg/logo-htmlacademy-small.svg" alt="логотип Html academy">
-                    </a> 
-                </div>
+              <ul class="socials">
+                  <li class="socials__item">
+                      <a class="socials__link" href="#">Твиттер</a>
+                  </li>
+                  <li class="socials__item">
+                      <a class="socials__link" href="#">Инстаграмм</a>
+                  </li>
+                  <li class="socials__item">
+                      <a class="socials__link" href="#">Facebook</a>
+                  </li>
+                  <li class="socials__item">
+                      <a class="socials__link" href="#">ВКонтакте</a>
+                  </li>
+              </ul>
+              <div class="footer__nav">
+                  <div class="footer__nav-col">
+                      <ul class="footer__nav-items">
+                          <li class="footer__nav-item">
+                              <a class="footer__nav-link" href="#">Для поставщиков</a>
+                          </li>
+                          <li class="footer__nav-item">
+                              <a class="footer__nav-link" href="#">О производстве</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="footer__nav-col">
+                      <ul class="footer__nav-items">
+                          <li class="footer__nav-item">
+                              <a class="footer__nav-link" href="#">Наши документы</a>
+                          </li>
+                          <li class="footer__nav-item">
+                              <a class="footer__nav-link" href="#">Экологические стандарты</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <a class="footer__logo-link" href="#">
+                <img class="footer__logo-HtmlAcademy" width="108" src="img/svg/logo-htmlacademy-small.svg" alt="логотип Html academy">
+              </a> 
             </div>
         </footer>
-    </div>
 </body>
 </html>
