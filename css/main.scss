@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  min-width: 480px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -53,6 +57,7 @@ p {
   .container {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 }
 
@@ -61,15 +66,14 @@ p {
   margin: 0 auto;
 }
 
-.nav__wrap {
-  margin-bottom: 20px; 
+.nav__wrap { 
   display: flex;
 }
 
 .header__logo {
   width: 154px;
   height: 64px;
-  margin-right: 24px;
+  margin-right: 10px;
 }
 
 .header__navigation {
@@ -81,14 +85,18 @@ p {
 
 .navigation-site {
   display: flex;
-  &__item{
-    margin-right: 27px;
+  flex-wrap: wrap;
+  width: 410px;
+  &__link {
+    color: #ffffff;
+    padding: 6px 14px;
+    text-decoration: rgba(255, 255, 255, .2) underline;
+    &:hover {
+      color: #333333;
+      background-color: #f7f6f3;
+      border-radius: 30px;
+    }
   }
-}
-
-.navigation-site__link{
-  color: #ffffff;
-  text-decoration: rgba(255, 255, 255, .2) underline;
 }
 
 .header__buttons {
@@ -103,6 +111,7 @@ p {
 }
 
 .buttons__link {
+  display: block;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
@@ -110,8 +119,9 @@ p {
 }
 
 .contacts {
-  margin-top: -20px;
-  margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 65px;
   text-align: right;
 }
 
@@ -130,10 +140,12 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .slider__title {
+  margin-top: 317px;
+  margin-bottom: 31px;
   padding-left: 238px;
   padding-right: 238px; 
   font-size: 60px;
@@ -141,10 +153,16 @@ p {
   text-align: center;
 }
 
+.slider__img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
 .btn {
   font: inherit;
   display: inline-block;
-  padding: 18px 40px;
+  padding: 9px 40px;
   font-size: 32px;
   line-height: 44px;
   color: #ffffff;
@@ -165,6 +183,8 @@ p {
 .slider__nav {
   display: flex;
   margin-right: auto;
+  position: relative;
+  top: -40px;
   label {
     display: block;
     width: 20px;
@@ -186,6 +206,7 @@ p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+  padding: 23px 20px;
   &__item {
     width: 560px;
   }
@@ -249,13 +270,21 @@ p {
   color: #323232;
   border-radius: 10px;
   &__title {
+    margin-bottom: 27px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
   }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   &__item{
+    margin-bottom: 28px;
     line-height: 22px;
     font-weight: normal;
+    width: 540px;
   }
 }
 
@@ -315,11 +344,18 @@ p {
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
+.map {
+  position: relative;
+}
+
 .map-img {
   width: 100%;
 }
 
 .map__contacts {
+  position: absolute;
+  top: 62px;
+  right: 27px;
   padding: 33px 25px 28px;
   width: 302px;
   text-align: left;
