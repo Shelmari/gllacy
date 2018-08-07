@@ -653,12 +653,14 @@ img {
 }
 
 .feedback {
+  display: none;
+  padding-left: 24px;
+  padding-right: 25px;
+  border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-left: 24px;
-  border-radius: 10px;
   background-color: #f8f7f4;
   color: #323232;
   width: 477px;
@@ -667,4 +669,54 @@ img {
     margin: 20px 0;
     padding: 0;
   }
+  &__close {
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 10;
+      left: 2px;
+      width: 22px;
+      height: 2px;
+      background-color: #231f20;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  &__input {
+    margin-bottom: 20px;
+    padding:15px;
+    border: 1px solid #d3d3d2;
+    border-radius: 10px;
+    width: 267px;
+    height: 44px;
+  }
+  &__textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    width: 428px;
+    height: 155px;
+    resize: none;
+  }
+}
+
+.btn_feedback {
+  padding: 13px 23px;
+  float: right;
+  font-size: 18px;
+  line-height: 24px;
 }
