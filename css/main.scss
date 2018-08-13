@@ -753,8 +753,11 @@ img {
   margin-left: auto;
 }
 
-.feedback {
+.modal__feedback {
   display: none;
+}
+
+.feedback {
   padding-left: 24px;
   padding-right: 25px;
   border-radius: 10px;
@@ -766,6 +769,7 @@ img {
   color: #323232;
   width: 477px;
   min-height: 442px;
+  z-index: 2;
   &__title {
     margin: 20px 0;
     padding: 0;
@@ -820,4 +824,14 @@ img {
   float: right;
   font-size: 18px;
   line-height: 24px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.5);
+  z-index: 1;
 }
