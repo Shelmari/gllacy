@@ -749,6 +749,9 @@ img {
 .modal__feedback {
   display: none; }
 
+.modal__feedback_show {
+  display: block; }
+
 .feedback {
   padding-left: 24px;
   padding-right: 25px;
