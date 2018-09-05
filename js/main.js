@@ -1,5 +1,6 @@
 var btnMap = document.querySelector(".btn_map");
 var feedback = document.querySelector(".modal__feedback");
+var feedbackWin = document.querySelector(".feedback");
 var close = document.querySelector(".feedback__close");
 var inputLogin = document.querySelector(".feedback__input[type=text]");
 var inputEmail = document.querySelector(".feedback__input[type=email]");
@@ -29,11 +30,10 @@ btnMap.addEventListener("click", function(evt){
 feedbackForm.addEventListener("submit", function(evt){
   if (!inputLogin.value || !inputEmail.value || !inputTextarea.value){
     evt.preventDefault();
-    console.log("нужно ввести имя и почту с комментарием");
+    feedbackWin.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("inputLogin", inputLogin.value);
-      console.log("Отправил");
     }
   }
 });
@@ -41,6 +41,7 @@ feedbackForm.addEventListener("submit", function(evt){
 close.addEventListener("click", function(evt){
   evt.preventDefault();
   feedback.classList.remove("modal__feedback_show");
+  feedbackWin.classList.remove("modal-error");
 });
 
 window.addEventListener("keydown", function(evt) {
